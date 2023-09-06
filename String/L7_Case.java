@@ -1,6 +1,6 @@
 package String;
 
-public class L6_Case {
+public class L7_Case {
     
     public static String toUpperCase(String str){
         StringBuilder sb = new StringBuilder("");
