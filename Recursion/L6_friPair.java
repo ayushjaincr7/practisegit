@@ -9,6 +9,8 @@ public class L6_friPair {
         if(n==2){
             return 2;
         }
+        // single
+        // pairing
         return pairing(n-1)+(n-1)*pairing(n-2);
     }
 
