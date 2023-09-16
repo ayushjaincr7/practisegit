@@ -38,15 +38,26 @@ public class L3_fibonacci {
             }
             return firOcc(arr, key, i + 1); // Recursively search the rest of the array
         }
-        
-
+    // ****************************************
+        // last Occurence
+        public static int lasOcc(int arr[], int key, int i){
+            if(i == arr.length){
+                return -1;
+            }
+            int isFound = lasOcc(arr, key, i+1);
+            if(isFound == -1 && arr[i] == key){
+                return i;
+            }
+            return isFound;
+        }
 
 
     public static void main(String args[]){
         int n=5;
         System.out.println(fib(n));
-        int arr[] = {3,1,4,5,6};
+        int arr[] = {1,1,1,1,1};
         System.out.println(isSorted(arr, 0));
         System.out.println(firOcc(arr, 4, 0));
+        System.out.println(lasOcc(arr, 1, 0));
     }
 }
