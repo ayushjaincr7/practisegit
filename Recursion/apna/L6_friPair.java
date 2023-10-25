@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.apna;
 
 public class L6_friPair {
 
