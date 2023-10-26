@@ -1,4 +1,4 @@
-package Recursion.kunal;
+package Recursion.kunal.Easy;
 
 public class L2_fib {
     
