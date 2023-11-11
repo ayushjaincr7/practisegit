@@ -113,6 +113,18 @@ public class L1_single {
             System.out.println("End");
         }
 
+
+
+        // ******** ******* ******** Recursion Insertion 
+        public void insertRec(int val, int index, Node){
+            if(index == 0) {
+                Node temp = new Node(val, node);
+                size++;
+                
+            }
+        }
+
+
         private class Node {
             private int value;
             private Node next;
