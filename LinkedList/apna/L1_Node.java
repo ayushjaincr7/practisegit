@@ -146,6 +146,42 @@ public class L1_Node {
         return helper(head, key);
 
     }
+
+    //  ****** reverse a linked list ********
+    public void reverse(){
+        Node curr = tail = head;
+        Node prev = null;
+        Node next;
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+        
+    }
+
+
+    // remove nth node from End
+
+    public void removeNth(int n){
+        if(n == size){
+            head = head.next;
+            return;
+        }
+
+        int i = 1;
+        int iToFind = size-n;
+        Node prev = head;
+        while(i<iToFind){
+            prev = prev.next;
+            i++;
+        }
+
+        prev.next = prev.next.next;
+        return;
+    }
  
     public static void main(String[] args) {
         L1_Node ll = new L1_Node();
@@ -164,5 +200,9 @@ public class L1_Node {
         ll.print();
         System.out.println(ll.search(3));
         System.out.println(ll.recSearch(3));
+        ll.reverse();
+        ll.print();
+        ll.removeNth(2);
+        ll.print();
     }
 }
