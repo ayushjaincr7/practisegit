@@ -41,7 +41,7 @@ public class L1_intro {
             rear = rear-1;
             return front;
         }
-//   peek
+        //   peek
         public static int peak(){
             if(isEmpty()){
                 System.out.println("empty queue");
